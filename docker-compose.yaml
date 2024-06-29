@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+ project:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: project
+    restart: always
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
